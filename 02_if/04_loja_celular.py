@@ -1,9 +1,9 @@
 # %%
 modelo = input("""
 Menu
-(1) Samsung
-(2) Motorola
-(3) Iphone
+(1) Samsung - R$ 2000
+(2) Motorola - R$ 1500
+(3) Iphone - R$ 5000
 """)
 garantia = input("""
 Quer garantia estendida? 
@@ -23,11 +23,14 @@ conta = 0
 conta = float(conta)
 
 if modelo == "1":
+    conta = 2000
     modelo = "Samsung"
 elif modelo == "2":
+    conta = 1500
     modelo = "Motorola"
 elif modelo == "3":
     modelo = "Iphone"
+    conta = 5000
 else:
     print("Não temos este modelo")
 
