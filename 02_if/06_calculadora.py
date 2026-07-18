@@ -4,14 +4,14 @@ Escolha qual conta quer fazer:
 1 - Soma
 2 - Subtração
 3 - Multiplicação
-4 - Dívisão
+4 - Divisão
 5 - Potencia
 6 - Raiz
 
 """)
 
-numero1 = input("Digida o número para fazer a conta")
-numero2 = input("Digida o outro número para fazer a conta")
+numero1 = input("Digita o número para fazer a conta")
+numero2 = input("Digita o outro número para fazer a conta")
 
 resultado = 0
 resultado = float(resultado)
@@ -31,6 +31,6 @@ elif operacao == "5":
 elif operacao == "6":
     resultado = numero1 ** (1/2)
 else:
-    print("digite um némero.")
+    print("digite uma opção de operação.")
 
 print("Os números escolhidos foram", numero1, "e número", numero2, "Seu resultado foi", resultado)
