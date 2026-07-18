@@ -8,14 +8,16 @@ saldo = float(saldo)
 saque = float(saque)
 resto = float(resto)
 
-if saldo > 0:
-    if saldo > saque:
+if saque <= 0:
+  print("Digite um valor maior que 0")
+elif saldo > 0:
+    if saldo >= saque:
         resto = saldo - saque
         print("voce sacou",saque, "seu saldo atual é" ,resto)
     else:
-        print("voce não tem dinheiro")
+        print("Saldo insuficiente")
 else:
-    print("sem dinheiro")
+    print("saldo insuficiente")
 
 
 
