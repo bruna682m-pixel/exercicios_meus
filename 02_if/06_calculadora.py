@@ -25,7 +25,10 @@ elif operacao == "2":
 elif operacao == "3":
     resultado = numero1 * numero2
 elif operacao == "4":
-    resultado = numero1 / numero2
+    if numero2 == 0:
+     print("Divisao por 0 não existe")
+    else:
+     resultado = numero1 / numero2
 elif operacao == "5":
     resultado = numero1 ** numero2
 elif operacao == "6":
