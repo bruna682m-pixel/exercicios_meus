@@ -5,6 +5,7 @@ texto = """Escolha algum produto de nossa padaria e a quantidade
 (3) Sonho - R$5.98
 (4) Café - R$2.50
 """
+print(texto)
 texto = input("Qual produto voce quer? ")
 qtd = input("Digite a quantidade: ")
 
