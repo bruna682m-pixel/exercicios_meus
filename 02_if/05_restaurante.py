@@ -32,7 +32,8 @@ elif prato == "2":
     conta = 29.50
     prato = "Lasanha"
 elif prato == "3":
-    prato = "35.75"
+    conta = 35.75
+    prato = "Hamburguer"
 else:
     print("Digite uma prato")
 
