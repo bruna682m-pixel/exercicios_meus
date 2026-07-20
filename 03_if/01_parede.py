@@ -1,5 +1,6 @@
+# %%
 texto = """ 
-Me diga a altura e largura de sua parede
+Me diga a altura e largura de sua parede:
 
 Me diga a cor da sua parede:
 (1) Azul
@@ -12,10 +13,10 @@ Me diga o acabamento de sua parede:
 """
 print(texto)
 
-altura = input("Diga a altura de sua parede")
-largura = input("Diga a largura de sua parede")
-cor = input("Me diga a cor de sua parede")
-acabamento = input("Me diga o acabamento de sua parede ")
+altura = input("Diga a altura de sua parede:")
+largura = input("Diga a largura de sua parede:")
+cor = input("Me diga a cor de sua parede:")
+acabamento = input("Me diga o acabamento de sua parede: ")
 
 altura = float(altura)
 largura = float(largura)
@@ -29,14 +30,14 @@ elif cor == "2":
 elif cor == "3":
   cor = "Cinza"
 else:
-  print("Escolha uma cor para sua parede")
+  print("Escolha uma cor para sua parede:")
 
 if acabamento == "1":
   acabamento = "Fosco"
 elif acabamento == "2":
   acabamento = "brilhante"
 else:
-  print("Digite o acabamento de sua parede")
+  print("Digite o acabamento de sua parede:")
 
 print("A area de sua parede deu: ",area,"A cor escolhida foi: ",cor, "E o acabamento escolhido foi: ",acabamento)
  
