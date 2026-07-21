@@ -117,7 +117,7 @@ else:
     print("Digite alguma opção.")
 
 print("""
-Resumo do pedidos
+Resumo do pedido
       
 Hamburguer:""" , tipo,
 """
