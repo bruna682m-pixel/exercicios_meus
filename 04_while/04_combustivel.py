@@ -1,3 +1,4 @@
+# %%
 combustivel = 50
 
 while combustivel >= 0:

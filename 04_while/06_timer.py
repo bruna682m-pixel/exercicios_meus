@@ -1,3 +1,4 @@
+# %%
 timer = 30
 
 while timer >= 0:

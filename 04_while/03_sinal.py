@@ -1,3 +1,5 @@
+ # %%
+
 sinal = 10
 
 while sinal >= 0:
@@ -5,3 +7,4 @@ while sinal >= 0:
   sinal -= 1
 
 print("Sinal verde.")
+
