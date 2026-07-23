@@ -2,13 +2,13 @@
 media = 0
 maior = 0
 menor = 0
-count = 1
+count = 0
 soma = 0
 
 maior = float(maior)
 menor = float(menor)
 media = float(media)
-soma = float(soma)
+
 
 while True:
     notas = input("Digite suas notas:")
@@ -16,7 +16,7 @@ while True:
     if notas == "":
         break
 
-    if count == 1:
+    if count == 0:
         notas = float(notas)
         maior = notas
         menor = notas
@@ -24,12 +24,13 @@ while True:
         notas = float(notas)
         if notas > maior:
             maior = notas
-        elif notas < menor:
+
+        if notas < menor:
             menor = notas
               
     count += 1
+    soma = soma + notas
 
-soma = soma + notas
 media = soma / count
 print("""
 Média =""", media,"""

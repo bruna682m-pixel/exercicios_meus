@@ -12,7 +12,8 @@ while True:
     valor_gol = int(valor_gol)    
     gols = gols + valor_gol
     count += 1
-    media = gols / count
+
+media = gols / count
 
 print("O total de gols foi:", gols, "A média de gol foi:", media)
 # %%
