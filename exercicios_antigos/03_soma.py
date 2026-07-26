@@ -7,6 +7,7 @@ total = 0
 
 while count <= 100:
     if count % 2 == 0:
+        total = total + count
         print("Estamos no número:",count)
 
     count += 1
