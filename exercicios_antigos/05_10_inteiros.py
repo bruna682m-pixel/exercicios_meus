@@ -2,7 +2,7 @@
 #quantos deles estão fora do intervalo, ao final mostrar estas informações.
 
 # %%
-count = 0
+count = 1
 
 no_intervalo = 0
 fora_intervalo = 0
@@ -16,8 +16,7 @@ while count <= 10:
 
     if numero >= 10 and numero <= 20:
         no_intervalo += 1
-
-    if numero < 10 or numero > 20:
+    else:
         fora_intervalo += 1
 
     count += 1
