@@ -11,7 +11,6 @@ while count <= 100:
         print("Estamos no número:",count)
 
     count += 1
-    total = total + count
 
 print("a soma dos pares é:", total)
 # %%
