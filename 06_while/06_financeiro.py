@@ -16,12 +16,13 @@ while True:
     opcao = int(opcao)
     valores = float(valores)
 
-    if opcao == 1:
-        total_gasto = total_gasto - valores
-    if opcao == 2:
-        total_recebido = total_recebido + valores
     if opcao == 3:
         break
+
+    if opcao == 1:
+        total_gasto = total_gasto - valores
+    elif opcao == 2:
+        total_recebido = total_recebido + valores
 
 total = total_recebido - total_gasto
 
