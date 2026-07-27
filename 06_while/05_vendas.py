@@ -4,7 +4,7 @@ mais_caro = 0
 mais_caro_nome = 0
 qtd = 0
 total = 0
-count = 1
+count = 0
 
 while True:
     nome = input("Digite o nome do produto:")
@@ -35,7 +35,7 @@ print("""
 Faturamento:""",faturamento,"""
 Produto mais caro:
 """, mais_caro_nome, """R$""", mais_caro, """
-Quantidade vendas:""", qtd)
+Quantidade vendas:""", count)
 
 
 
