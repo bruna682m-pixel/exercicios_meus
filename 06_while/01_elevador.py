@@ -9,6 +9,8 @@ while total_pessoas <= 8:
 
     total_pessoas = total_pessoas + pergunta
 
-print("Elevador cheio.")
+    if total_pessoas >= 8:
+      print("Elevador cheio. Limite de 8 pessoas")
+      break
 
 

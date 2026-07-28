@@ -21,7 +21,7 @@ while True:
         vida = vida - 5
         print("Voce tomou 5 de dano. Sua vida é de:", vida)
     if pergunta == 2:
-        if vida <= 100:
+        if vida >= 100:
             print("Voce já tem vida maxima.")
         else:
             vida = vida + 3
