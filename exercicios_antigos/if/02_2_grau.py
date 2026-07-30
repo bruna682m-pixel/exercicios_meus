@@ -1,5 +1,4 @@
 # %%
-# resolver
 # Solicitar 3 valores inteiros para o cálculo da equação de segundo grau,
 
 delta = 0
@@ -20,28 +19,34 @@ c = float(c)
 delta = b ** 2 - 4 * a * c
 
 if delta < 0:
-    print("Não tem raízes reais. Delta =", delta)
+    print("Não tem raízes reais. Delta=",delta)
 elif delta == 0:
+    raiz = delta ** (1/2)
+    
+    b_sinal = - b 
+    
+    divisao = 2 * a
+    
+    x1 = b_sinal + raiz
+    x1 = x1 / divisao
+    print("Delta:",delta)
     print("Existe 1 raíz real")
+    print("Sua equação de grau 2 deu. x1 e x2=", x1)
 
-elif delta > 0:
+elif delta > 0: 
     raiz = delta ** (1/2)
 
     b_sinal = - b 
 
     divisao = 2 * a
 
-    x1 = b_sinal - raiz 
-    x1 = x1 / divisao
-
-    x2 = b_sinal + raiz
+    x2 = b_sinal - raiz 
     x2 = x2 / divisao
-    print("Sua equação de grau 2 deu. x1:", x1,"e x2:",x2)
 
-#print(x1)
-#print(x)
-#print(raiz)
-#print(delta)
+    x1 = b_sinal + raiz
+    x1 = x1 / divisao
+    print("Delta:",delta)
+    print("Existem 2 raízes reais")
+    print("Sua equação de grau 2 deu. x1=", x1,"e x2=",x2)
 
 
-# %%
