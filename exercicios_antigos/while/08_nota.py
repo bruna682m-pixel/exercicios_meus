@@ -1,4 +1,4 @@
-
+# %%
 #Escrever um algoritmo que lê um valor em #Reais (R$) e calcule qual o menor número #possível de notas de 100, 50, 10, 5 e 1 em #que o valor lido pode ser decomposto. #Escrever o valor lido e a relação de notas #necessárias.
 
 total = 0
@@ -28,6 +28,3 @@ total = resto // 1
 resto = resto % 1
 print("total em notas de 1 = ",total)
 
-
-
-  

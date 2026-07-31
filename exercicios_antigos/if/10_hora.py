@@ -1,30 +1,39 @@
 # %%
 # Dado um número inteiro de segundos, mostrar a quantas horas, minutos e segundos ele corresponde.
 
-entrada = input("Digite um número para mostra horas, minutos e segundos")
+# %%
+total = 0
+resto = 0
 
-entrada = int(entrada)
+total = 3660 // 3600
+print("total hora",total)
 
-total = 47 // 10 
+resto = 3660 % 3600
+print(resto)
 
-print(total)
+total = resto // 60
+print ("total min",total)
 
+resto = resto % 60
+print (resto)
 
 # %%
-dias = input("me diga os dia ")
-horas = input("me diga as horas ")
-minutos = input("me diga os minutos ")
+total = 0
+resto = 0
 
-dias = int(dias)
-horas = int(horas)
-minutos = int(minutos)
+segundos_entrada = input("Digite o valor em segundos:")
 
-total_dias = dias * 1440
-total_horas = horas * 60
+segundos_entrada = int(segundos_entrada)
 
-total_tudo_minuto = total_dias + total_horas + minutos
+total = segundos_entrada // 3600
+print("O total em horas é:",total)
 
-print("voce digitou ", minutos, "minutos ")
-print(dias, "em minutos fica ", total_dias)
-print(horas, "em minutos fica ", total_horas)
-print("o total de tudo em minutos fica ", total_tudo_minuto)
+resto = segundos_entrada % 3600
+print(resto)
+
+total = resto // 60
+print("O total em minutos é:", total)
+
+resto = resto % 60
+print("O total em segundos é:",resto)
+

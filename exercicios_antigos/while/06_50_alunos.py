@@ -1,4 +1,4 @@
-#Ler três notas de 10 alunos de uma turma. Para cada aluno, calcule a média ponderada, como
+#Ler três notas de 11 alunos de uma turma. Para cada aluno, calcule a média ponderada, como
 #segue:
 
 #MP = ( n1*2 + n2*4 + n3*3 ) / 10
@@ -8,7 +8,7 @@
 #contrário. Ao final, mostre a média geral.
 
 # %%
-count = 1
+count = 0
 media_ponderada = 0
 media_geral = 0
 soma_media_geral = 0
@@ -26,8 +26,6 @@ while count <= 10:
 
     soma_media_geral = soma_media_geral + media_ponderada
 
-    media_geral = soma_media_geral / count
-
     if media_ponderada >=7:
         print("Aprovado",media_ponderada)
     else:
@@ -35,6 +33,7 @@ while count <= 10:
 
     count +=1
 
+media_geral = soma_media_geral / count
 print("A média da turma é:", media_geral)
 
 

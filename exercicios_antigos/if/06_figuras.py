@@ -15,9 +15,9 @@ if x + y > z and x + z > y and y + z > x:
     print("Suas medidas formam um triângulo.")
     if x == y and y == z:
         print("Seu triãngulo é equilátero")
-    if x == y and y != z:
+    elif x == y or x == z or y == z:
         print("Seu triãngulo é isóseles")
-    if x != y and y != z:
+    elif x != y and y != z:
         print("Seu triãngulo é escaleno")
     else:
         print("Suas medidas não formam um triângulo.")
