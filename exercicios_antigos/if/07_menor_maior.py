@@ -10,55 +10,20 @@ a = float(a)
 b = float(b)
 c = float(c)
 
-maior = 0
-menor = 0
+if a > b:
+    aux = a
+    a = b
+    b = aux
 
-print(a,b,c)
+if b > c:
+    aux = b
+    b = c
+    c = aux
 
-if a > b and a > c:
-    maior = a
-    a = maior
-    print("b,c,a")
-elif b > a and b > c:
-    maior = b
-    b = maior
-    print("bb")
-else:
-    maior = c
-    c = maior
-    print("cc")
+if a > b:
+    aux = a
+    a = b
+    b = aux
 
-if a < b and a < c:
-    menor = a
-    a= menor
-    print("a ")
-elif b < a and b < c:
-    menor = b
-    b = menor
-    print("b")
-else:
-    menor = c
-    c = menor
-    print("c")
-
-
-
-
-if a > b > c:
-    print(a,b,c)
-elif a > c > b:
-    print(a,c,b)
-elif b > a > c:
-    print(b,a,c)
-elif b > c > a:
-    print(b,c,a)
-elif c > a > b:
-    print(c,a,b)
-elif c > b > a:
-    print(c,b,a)
-
-
-
-
-print(menor, maior)
-
+print("Os números em ordem crescente ficaram:", a, b, c)
+print("Os números em ordem decrescente ficaram:", c, b, a)
