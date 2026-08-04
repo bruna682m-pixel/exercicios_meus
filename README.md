@@ -1,4 +1,4 @@
-# 🐍 Exercícios de Lógica de Programação em Python
+# Exercícios de Lógica de Programação em Python
 
 Este repositório reúne os exercícios que desenvolvi durante meus estudos de **Lógica de Programação** utilizando **Python**.
 
@@ -6,7 +6,7 @@ O objetivo deste projeto é registrar minha evolução, praticar a resolução d
 
 ---
 
-## 📚 Conteúdo estudado
+## Conteúdo estudado
 
 Até o momento, os exercícios abordam:
 
@@ -22,7 +22,7 @@ Até o momento, os exercícios abordam:
 
 ---
 
-## 📝 Exercícios desenvolvidos
+## Exercícios desenvolvidos
 
 Entre os exercícios presentes neste repositório estão:
 
@@ -41,7 +41,7 @@ Entre os exercícios presentes neste repositório estão:
 
 ---
 
-## 🎯 Objetivo
+## Objetivo
 
 Este repositório tem como finalidade:
 
@@ -52,13 +52,13 @@ Este repositório tem como finalidade:
 
 ---
 
-## 🚀 Tecnologias
+## Tecnologias
 
 * Python 3
 
 ---
 
-## 📈 Próximos passos
+## Próximos passos
 
 Pretendo continuar este repositório adicionando exercícios sobre:
 
@@ -74,6 +74,6 @@ Pretendo continuar este repositório adicionando exercícios sobre:
 
 ---
 
-## 👩‍💻 Sobre
+## Sobre
 
 Este repositório faz parte da minha jornada de aprendizado em programação e será atualizado conforme avanço nos estudos.
