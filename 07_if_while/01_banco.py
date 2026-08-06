@@ -1,5 +1,13 @@
 # %%
-print("""
+opcao = 0
+saldo = 1000
+qtd_saque = 0
+total_deposito = 0
+total_saque = 0
+
+
+while True:
+    print("""
 Banco Python
 
 1- Consultar saldo
@@ -8,14 +16,7 @@ Banco Python
 4- Sair
 
 """)
-opcao = 0
-saldo = 1000
-qtd_saque = 0
-total_deposito = 0
-total_saque = 0
 
-
-while opcao <= 3:
     opcao= int(input("Digite a opção voce quer fazer:"))
 
     if opcao == 1:
@@ -24,7 +25,7 @@ while opcao <= 3:
         print("Voce sacou R$",total_saque,"reais.")
         print("Voce depósitou R$",total_deposito,"reais")
 
-    if opcao == 2:
+    elif opcao == 2:
         deposito = float(input("Digite o valor do depósito"))
 
         if deposito < 0:
@@ -37,13 +38,13 @@ while opcao <= 3:
             total_deposito = total_deposito + deposito
 
 
-    if opcao == 3:
+    elif opcao == 3:
         saque = float(input("Digite o valor do saque:"))
 
-        if qtd_saque > 2  :
+        if qtd_saque >= 3  :
                     print("Máximo de 3 saques por dia.")
                     break
-
+        
         if saque > saldo:
             print("Voce não tem saldo suficiente.")
         elif saque < 0:
@@ -56,7 +57,11 @@ while opcao <= 3:
             total_saque = total_saque + saque
             qtd_saque += 1
 
-        
+    elif opcao == 4:
+        print("Saindo")
+        break
+    else:
+        print("Opção invalida.")
             
 
 
