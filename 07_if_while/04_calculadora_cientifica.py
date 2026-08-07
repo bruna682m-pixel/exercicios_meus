@@ -1,4 +1,5 @@
 # %%
+numero_atual = numero1
 opcao = int(input("""
 
 1- Soma
@@ -53,6 +54,20 @@ while opcao <= 12:
 
         print("Sua divisão deu:",total)
 
+    elif opcao == 5:
+        numero1 = int(input("Digite um número para calcular o fatorial:"))
+        total = 1
+        numero_atual = numero1
+    if numero1 > 0:
+        while numero1 >= 1:
+            total = total * numero1
+            numero1 -= 1
+    elif numero1 == 0:
+        print("O fatorial de",numero_atual,"é igual a 1")
+    else:
+        print("O número deve ser positivo")
+
+    print("O fatorial de",numero_atual,"é igual a",total)
 
 print("sai")
 
