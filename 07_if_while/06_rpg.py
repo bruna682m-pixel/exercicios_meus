@@ -3,7 +3,7 @@ import random
 floresta_random = random.randint(1,4)
 vida = 100
 ataque = 10
-moedas = 100
+moedas = 50
 defesa = 0
 pocoes = 0
 espada = 0
@@ -12,17 +12,16 @@ dragao = 100
 ataque_dragao = 20
 
 opcao_ataque_recusa = 0
-opcao_menu = int(input("Digite a opção:"))
 
 while True:
-    opcao_menu = int(input("""
+    opcao_menu = int(input(f"""
 Rpg de texto
 
-Vida: 100
-Ataque: 10
-Defesa: 0
-Moedas: 0
-Poções: 0
+Vida: {vida}
+Ataque: {ataque}
+Defesa: {defesa}
+Moedas: {moedas}
+Poções: {pocoes}
 
 1- Explorar floresta
 2- Loja
@@ -34,6 +33,7 @@ Poções: 0
 """))
 
     if opcao_menu == 1:
+        floresta_random = random.randint(1,4) # correcao aqui
         if floresta_random == 1:
             opcao_ataque_recusa = int(input("""
 Você encontrou o Fachada um Goblin:
@@ -94,11 +94,13 @@ Moedas: {moedas}
 3- Poção (25)
 4- Voltar
 """))        
-        if opcao_menu == 1 and moedas >= 50:
+        if opcao_menu == 1 and moedas >= 50 and espada == False:
              ataque = ataque + 10
              moedas = moedas - 50
              espada = True
              print("Espada comprada. Você ficou com:",ataque,"ataque e com",moedas,"moedas")
+        elif opcao_menu == 1 and espada == True:
+            print("Você já possui uma espada.")
         elif opcao_menu == 2 and moedas >= 80:
              defesa = defesa + 10
              moedas = moedas - 80
@@ -116,20 +118,24 @@ Moedas: {moedas}
     elif opcao_menu == 3:
         if vida < 100:
             vida = vida + 20
+
+            if vida > 100:
+                vida = 100
+
             print("Você descansou. Sua vida atual é:",vida)
         else:
             print("Sua vida já esta cheia.")
 
     elif opcao_menu == 4:
-        if espada == True:
-            espada = "sim"
+        if espada:
+            espada_status = "sim"
         else:
-             espada = "não"
+             espada_status = "não"
 
-        if armadura == True:
-            armadura = "sim"
+        if armadura:
+            armadura_status = "sim"
         else:
-            armadura = "não"
+            armadura_status = "não"
         
          
         print("""
@@ -139,8 +145,8 @@ Ataque:""",ataque,"""
 Defesa:""",defesa,"""
 Moedas:""",moedas,"""
 Poções:""",pocoes,"""
-Armadura:""",armadura,"""
-Espada:""",espada)
+Armadura:""",armadura_status,"""
+Espada:""",espada_status)
 
     elif opcao_menu == 5:
          print("HOPE O Dragão APARECEU")
@@ -155,25 +161,25 @@ Espada:""",espada)
                 print("GAME OVER")
                 break
             else:
-                if dragao <= 100 and dragao > 0:
+                if dragao > 0:
                     print("Hope ainda tem",dragao,"vidas")
-                    ataque_dragao = 0
-                    vida = vida - 20
-                    if espada == True:
-                        ataque = 20
-                        dragao = dragao - 20
-                        print("drag",dragao)
-                    else:
-                        ataque = 10
-                        dragao = dragao - 10
-                        print("drag",dragao)
+                    vida -= ataque_dragao 
+                    dragao -= ataque
+
                 else:
                     print("Você derrotou o dragão. Paranéns!")
                     print("Você venceu o jogo")
+
+                if vida <= 0:
+                    print("GAME OVER")
+                    break
+
          elif opcao_menu == 2:
              if pocoes > 0 and vida < 100:
                  vida = vida + 30
                  pocoes = pocoes - 1
+                 if vida > 100:
+                     vida = 100
              else:
                 print("Você não tem poção ou sua vida está cheia")
 

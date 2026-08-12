@@ -13,11 +13,12 @@ while True:
         print("Senha correta.")
         break
     else:
+        tentativas -= 1
+
         if tentativas <= 0:
             print("Suas tentativas acabaram.")
             break
         else:
-            tentativas -= 1
             print("Senha incorreta. Faltam",tentativas,"tentativas.")
 
     count += 1

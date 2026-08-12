@@ -30,12 +30,7 @@ Deseja adicionar um produto?
 
         print("Voce adicionou no carrinho",nome_produto,total)
 
-        if count == 1:
-            total = preco * qtd_produto
-            print("2",total,count)
-        else:
-            total = total + (preco * qtd_produto)
-            print("1",total,count)
+        total = total + preco * qtd_produto
     else:
         break
     count += 1
@@ -68,82 +63,66 @@ while True:
     else:
         print("Valor insuficiente.")
         
-        
-
-
-print("sai")
-
 # %%
+# correção
 nome_produto = ""
 preco = 0
 qtd_produto = 0
-desconto = 0
 count = 1
-valor_pago =0
+valor_pago = 0
 total = 0
+total_com_desconto = 0
 
 opcao = int(input("""
 Deseja adicionar um produto?
 
-1- sim
-2- não
-
+1- Sim
+2- Não
 """))
 
 while opcao == 1:
+
+    nome_produto = input("Digite o nome do produto.")
+    preco = float(input("Digite o preço do produto."))
+    qtd_produto = int(input("Digite a quantidade do produto."))
+
+    total = total + preco * qtd_produto
+
+    print("Você adicionou:", nome_produto)
+    print("Total atual:", total)
+
     opcao = int(input("""
-Deseja adicionar um produto?
+Deseja adicionar outro produto?
 
-1- sim
-2- não
-2
+1- Sim
+2- Não
 """))
-    if opcao == 1:
-        nome_produto = input("Digite o nome do produto.")
-        preco = float(input("Digite o preço do produto."))
-        qtd_produto = int(input("Digite a quantidade do produto."))
-
-        print("Voce adicionou no carrinho",nome_produto,total)
-
-        if count == 1:
-            total = preco * qtd_produto
-            print("2",total,count)
-        else:
-            total = total + (preco * qtd_produto)
-            print("1",total,count)
-    else:
-        break
-    count += 1
-
 
 if total > 200:
-        desconto = total * 0.10
-        desconto = total - desconto
-        print("Quantidade de produto:""",qtd_produto,)
-        print("Voce recebeu R$ 10,00 de desconto. O total deu R$",desconto)   
+    total_com_desconto = total - total * 0.10
+    print("Você recebeu 10% de desconto.")
+else:
+    total_com_desconto = total
 
+print("Total a pagar:", total_com_desconto)
 
-while valor_pago <= total or valor_pago >= total or valor_pago <= desconto or valor_pago >= desconto:
-    valor_pago = float(input("Digite o valor pago."))
-    if valor_pago >= total:
-        troco = valor_pago - total
-        print("""
-        Quantidade de produto:""",qtd_produto,"""
-        Total compra R$""",total)
-        print("Voce pagou R$",total,"Seu troco foi de R$",troco)
+while True:
+
+    valor_pago = float(input("Digite o valor pago:"))
+
+    if valor_pago >= total_com_desconto:
+
+        troco = valor_pago - total_com_desconto
+
+        print("Total da compra:", total_com_desconto)
+        print("Valor pago:", valor_pago)
+        print("Seu troco foi:", troco)
+
         break
-    if valor_pago >= desconto:
-        troco = valor_pago - desconto
-        print("""
-        Quantidade de produto:""",qtd_produto,"""
-        Total compra R$""",total)
-        print("Voce pagou R$",total,"Seu troco foi de R$",troco)
-        break
+
     else:
-        print("Valor insuficiente.")
+        print("Valor insuficiente.")        
+
+
+
         
-        
-
-
-print("sai")
-

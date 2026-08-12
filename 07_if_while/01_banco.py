@@ -39,23 +39,23 @@ Banco Python
 
 
     elif opcao == 3:
-        saque = float(input("Digite o valor do saque:"))
 
         if qtd_saque >= 3  :
-                    print("Máximo de 3 saques por dia.")
-                    break
-        
-        if saque > saldo:
-            print("Voce não tem saldo suficiente.")
-        elif saque < 0:
-            print("Saque não pode ser negativo.")
-        elif saque == 0:
-            print("Saque igual a 0 não é permitido")
+            print("Máximo de 3 saques por dia.")
         else:
-            saldo = saldo - saque
-            print("Voce sacou",saque, "Agora seu saldo é R$",saldo)
-            total_saque = total_saque + saque
-            qtd_saque += 1
+            saque = float(input("Digite o valor do saque:"))
+                    
+            if saque > saldo:
+                print("Voce não tem saldo suficiente.")
+            elif saque < 0:
+                print("Saque não pode ser negativo.")
+            elif saque == 0:
+                print("Saque igual a 0 não é permitido")
+            else:
+                saldo = saldo - saque
+                print("Voce sacou",saque, "Agora seu saldo é R$",saldo)
+                total_saque = total_saque + saque
+                qtd_saque += 1
 
     elif opcao == 4:
         print("Saindo")

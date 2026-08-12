@@ -1,5 +1,6 @@
 # %%
 total = 0
+pedido = ""
 opcao = int(input("""
 Menu
 1- Hambúrguer = R$ 30,00
@@ -14,26 +15,26 @@ while True:
 
     if opcao == 1:
         total = total + 30
-        opcao = "Hambúrguer"
-        print("Você pediu",opcao)
+        pedido += "Hambúrguer\n"
+
     elif opcao == 2:
             total = total + 10
-            opcao = "Batata"
-            print("Você pediu",opcao)
+            pedido += "Batata\n"
+
     elif opcao == 3:
             total = total + 9.99
-            opcao = "Refri"
-            print("Você pediu",opcao)
+            pedido += "Refri\n"
+            
     elif opcao == 4:
             total = total + 4
-            opcao = "Sorvete"
-            print("Você pediu",opcao)
+            pedido += "Sorvete\n"
+
     elif opcao == 5:  
         if total >= 100:
                 desconto = total * 0.10
                 desconto = total - desconto  
                 troco = float(input(f"""
-                Seu pedido foi:{opcao}
+                Seu pedido foi:{pedido}
                 Total:{desconto}
                 """))
                 if troco < desconto:
@@ -44,15 +45,15 @@ while True:
                                 break
         else:
                 troco = float(input(f"""
-                                Seu pedido foi:{opcao}
+                                Seu pedido foi:{pedido}
                                 Total:{total}
                                 """))
-        if troco < total:
-                print("Paque o valor todo.")
-        else:
-                total = troco - total
-                print("Seu troco foi R$",total,)
-                break
+                if troco < total:
+                        print("Paque o valor todo.")
+                else:
+                        total = troco - total
+                        print("Seu troco foi R$",total,)
+                        break
 
 
     

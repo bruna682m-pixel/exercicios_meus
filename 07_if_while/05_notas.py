@@ -16,7 +16,7 @@ while count <= 5:
 
     media = (nota1 + nota2 + nota3) / 3
 
-    if media >5:
+    if media >= 5:
         print("Você foi aprovado. Sua méida foi de:",media)
         aprovado +=1
     else:
@@ -24,7 +24,6 @@ while count <= 5:
         reprovado += 1
     
     media_soma_geral = media_soma_geral + media
-    media_geral = media_soma_geral / count
 
     if count == 1:
         maior = media
@@ -32,14 +31,16 @@ while count <= 5:
     else:
         if media > maior:
             maior = media
-        elif media < menor:
+            
+        if media < menor:
             menor = media
 
+    media_geral = media_soma_geral / count
     count +=1
 
-print("Quantidade de alunos",count,)
+print("Quantidade de alunos",count - 1,)
 print("A maior média foi:",maior,"e a menor média foi:",menor)
 print("Foram aprovados",aprovado,"alunos. E foram reprovados",reprovado,"alunos")
-print("A média geral foi:",media_geral)
+print("A média geral foi:",round(media_geral, 2))
 
 
