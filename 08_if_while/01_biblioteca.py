@@ -3,7 +3,7 @@
 qtd_livro = 0
 opcao = 0
 qtd_total_livros = 10
-qtd_empretimo = 0
+qtd_emprestimo = 0
 
 opcao = int(input("opcao"))
 
@@ -59,7 +59,7 @@ Digite a opção do menu:
 qtd_livro = 0
 opcao = 0
 qtd_total_livros = 10
-qtd_empretimo = 0
+qtd_emprestimo = 0
 
 while True:
     opcao = int(input("""
@@ -81,32 +81,32 @@ Digite a opção do menu:
             print("Digite uma quantidade valida de livros para cadastrar.")
 
     elif opcao == 2:
-        qtd_empretimo_novo = int(input("quantos livros você quer emprestar?"))
+        qtd_emprestimo_novo = int(input("quantos livros você quer emprestar?"))
 
-        if qtd_empretimo_novo > qtd_total_livros:
+        if qtd_emprestimo_novo > qtd_total_livros:
             print("Não temos tudo isso de livros.")
-        elif qtd_empretimo_novo <= 0:
+        elif qtd_emprestimo_novo <= 0:
             print("Digite uma quantidade valida de livros para emprestrar.")
         else:
-            qtd_empretimo = qtd_empretimo + qtd_empretimo_novo
-            qtd_total_livros = qtd_total_livros - qtd_empretimo_novo
-            print("Você emprestou",qtd_empretimo_novo,"livros.")
+            qtd_emprestimo = qtd_emprestimo + qtd_emprestimo_novo
+            qtd_total_livros = qtd_total_livros - qtd_emprestimo_novo
+            print("Você emprestou",qtd_emprestimo_novo,"livros.")
 
     elif opcao == 3:
         qtd_livro = int(input("Digite a quantidade que você quer devolver?"))
 
         if qtd_livro > 0:
-            if qtd_empretimo > qtd_livro:
+            if qtd_emprestimo > qtd_livro:
                 qtd_total_livros = qtd_total_livros + qtd_livro
-                qtd_empretimo = qtd_empretimo - qtd_livro
-                print("Você ainda tem",qtd_empretimo,"livros para devolver." )
+                qtd_emprestimo = qtd_emprestimo - qtd_livro
+                print("Você ainda tem",qtd_emprestimo,"livros para devolver." )
             
-            elif qtd_empretimo == qtd_livro:
-                qtd_empretimo = qtd_empretimo - qtd_livro
+            elif qtd_emprestimo == qtd_livro:
+                qtd_emprestimo = qtd_emprestimo - qtd_livro
                 qtd_total_livros = qtd_total_livros + qtd_livro
                 print("Você devolveu todos os livros.")
             
-            elif qtd_empretimo < qtd_livro:
+            elif qtd_emprestimo < qtd_livro:
                 print("Você está devolvendo mais livros que emprestou")
 
         else:
