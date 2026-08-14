@@ -61,8 +61,6 @@ opcao = 0
 qtd_total_livros = 10
 qtd_empretimo = 0
 
-opcao = int(input("opcao"))
-
 while True:
     opcao = int(input("""
 Digite a opção do menu:
@@ -87,12 +85,12 @@ Digite a opção do menu:
 
         if qtd_empretimo_novo > qtd_total_livros:
             print("Não temos tudo isso de livros.")
-        elif qtd_empretimo <= 0:
+        elif qtd_empretimo_novo <= 0:
             print("Digite uma quantidade valida de livros para emprestrar.")
         else:
             qtd_empretimo = qtd_empretimo + qtd_empretimo_novo
             qtd_total_livros = qtd_total_livros - qtd_empretimo_novo
-            print("Você emprestou",qtd_empretimo,"livros.")
+            print("Você emprestou",qtd_empretimo_novo,"livros.")
 
     elif opcao == 3:
         qtd_livro = int(input("Digite a quantidade que você quer devolver?"))
