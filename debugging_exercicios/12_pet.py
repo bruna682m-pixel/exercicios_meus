@@ -25,10 +25,14 @@ Escolha:
         if fome < 0:
             fome = 0
 
-        if energia < 0:
-            energia = 0
+        if fome == 0:
+            print("Você está cheio.")
+        else:
+            print("Você alimentou o pet.")
 
-        print("Você alimentou o pet.")
+        if energia <= 0:
+            energia = 0
+            print("Você está muito cansado")
 
     elif opcao == 2:
 
@@ -37,33 +41,66 @@ Escolha:
 
         if energia > 100:
             energia = 100
+            print("Você está com máxima energia.")
+       
+        print("Você dormiu.")
 
         if fome > 100:
             fome = 100
-
-        print("Você dormiu.")
+            print("Você está com muita fome. Game over.")
+            break
+        elif fome > 90:
+            print("Cuidado com a fome. Você está com",fome,"de fome.")
 
     elif opcao == 3:
 
         if energia < 20:
-            print("Você está cansado.")
+            print("Você está cansado para brincar.")
+        else:
+            print("Você brincou.")
+            felicidade += 30
+            energia -= 20
+            fome += 10
 
-        felicidade += 30
-        energia -= 20
-        fome += 10
+            if felicidade > 100:
+                felicidade = 100
+                print("Felicidade máxima.")
+            elif felicidade < 0:
+                felicidade = 0
+                print("Você está infeliz")
 
-        if felicidade > 100:
-            felicidade = 100
+        if fome > 100:
+            fome = 100
+            print("Você está com muita fome. Game over.")
+            break
+        elif fome > 90:
+            print("Cuidado com a fome. Você está com",fome,"de fome.")
 
     elif opcao == 4:
 
         if energia < 30:
-            print("Você está cansado.")
+            print("Você está cansado para trabalhar.")
+        else:
+            print("Você trabalhou.")
+            dinheiro += 50
+            energia -= 30
+            fome += 20
+            felicidade -= 10
 
-        dinheiro += 50
-        energia -= 30
-        fome += 20
-        felicidade -= 10
+            if fome > 100:
+                fome = 100
+                print("Você está com muita fome. Game over.")
+                break
+            elif fome > 90:
+                print("Cuidado com a fome. Você está com",fome,"de fome.")
+
+            if felicidade > 100:
+                felicidade = 100
+                print("Felicidade máxima.")
+            elif felicidade < 0:
+                felicidade = 0
+                print("Você está infeliz")
+        
 
     elif opcao == 5:
 
@@ -76,3 +113,6 @@ Escolha:
 
         print("Saindo...")
         break
+
+    else:
+        print("Opção inválida.")
