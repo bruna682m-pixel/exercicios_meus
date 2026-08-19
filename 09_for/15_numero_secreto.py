@@ -1,3 +1,4 @@
+# %%
 import random
 
 numero_pc = random.randint(1,5)
@@ -13,10 +14,10 @@ for i in range(1,numero_max+1):
   else:
     print("Você acertou.")
     break
-    
 else:
     print("Suas tentativas acabaram")
     
  
+
  
  
