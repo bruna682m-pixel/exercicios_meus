@@ -1,25 +1,21 @@
 # %%
 # Mostrar se um número é ou não primo ( consistir )
 
-numero = 7
+numero = int(input("Digite um número:"))
 
-for i in range(1, numero+1):
-    total = numero % i
-    if total == 0:
-        print("primo")
-    else:
-        print("nao")
-    
-    print("i",i)
-    print(total)
-# %%
-numero = 7
+if numero <= 1:
+    print("Não é primo.")
+else:
 
-for i in range(1, numero+1):
-    if numero % i == 0:
-        print("primo")
+    for i in range(2, numero):
+        if numero % i == 0:
+            print("não primo.")
+            break
+
     else:
-        print("nao")
+        print("primo")
+
     
-    print("i",i)
-    print(total)
+
+
+

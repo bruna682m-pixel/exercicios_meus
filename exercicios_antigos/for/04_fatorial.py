@@ -7,9 +7,11 @@ numero = int(input("Digite um número para calcular o fatorial:"))
 if numero > 0 and numero < 14:
     for i in range(1, numero+1):
         fatorial = fatorial * i
-        print(i)
+
+    print("o fatorial de",numero,"é:",fatorial)
+    
 else:
     print("Seu número deve ser entre 0 e 14.")
 
-print("o fatorial de",numero,"é:",fatorial)
+
 
