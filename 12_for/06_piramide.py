@@ -1,3 +1,5 @@
+# %%
+
 for a in range(1, 1+1):
     print(a)
     for b in range(2, 2+1):
@@ -27,3 +29,4 @@ for a in range(1, 1+1):
         
         
     
+# %%
