@@ -19,6 +19,11 @@ Escolha a dificuldade:
             if palpite == numero_pc:
                 print("Acertou.")
                 break
+            elif palpite > numero_pc:
+                print("Chute alto.")
+            elif palpite < numero_pc:
+                print("Chute baixo.")
+
         else:
             print("Acabou suas tentativas.")
 
@@ -31,6 +36,11 @@ Escolha a dificuldade:
             if palpite == numero_pc:
                 print("Acertou.")
                 break
+            elif palpite > numero_pc:
+                print("Chute alto.")
+            elif palpite < numero_pc:
+                print("Chute baixo.")
+
         else:
             print("Acabou suas tentativas.")
 
@@ -43,6 +53,11 @@ Escolha a dificuldade:
             if palpite == numero_pc:
                 print("Acertou.")
                 break
+            elif palpite > numero_pc:
+                print("Chute alto.")
+            elif palpite < numero_pc:
+                print("Chute baixo.")
+                
         else:
             print("Acabou suas tentativas.")
 
@@ -60,3 +75,4 @@ Jogar novamente:
     else:
         print("Saindo...")
         break
+# %%
