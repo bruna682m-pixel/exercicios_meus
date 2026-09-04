@@ -1,0 +1,13 @@
+# %%
+
+numeros = [5, 2, 5, 8, 5, 3, 2, 5]
+qtd_numeros = 0
+
+numero_usuario = int(input("Digite um número:"))
+
+for i in numeros:
+    if numero_usuario == i:
+        qtd_numeros += 1
+
+print("Apareceu:",qtd_numeros,"vezes")
+# %%
