@@ -21,4 +21,7 @@ print(frutas[-3:])
 # %%
 print(frutas[:])
 
+# %%
+print(frutas[:-1])
+
 
