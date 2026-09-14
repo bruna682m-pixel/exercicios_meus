@@ -15,19 +15,21 @@ while True:
 """))
 
     if opcao == 1:
-        if volta == 0:
-            add_convidado = input("Digite o nome do convidado:")
-            convidados.append(add_convidado)
+        ja_encontrado = False
+        add_convidado = input("Digite o nome do convidado:")
+        
+        for i, enu in enumerate(convidados):
+            if enu == add_convidado:
+                ja_encontrado = True
+            else:
+                ja_encontrado = False
         else:
-            add_convidado = input("Digite o nome do convidado:")
-            for i, enu in enumerate(convidados):
-                if enu == add_convidado:
-                    print("Convidado já cadastrado.")
-                if enu != add_convidado: 
-                    convidados.append(add_convidado)
-                    print(add_convidado, "foi adicionado a lista de convidados.")
+            if ja_encontrado == True:
+                print("Já está na lista.")
+            else:
+                convidados.append(add_convidado)
+                print(add_convidado,"está na lista.")
 
-        volta += 1
             
     elif opcao == 2:
 
@@ -57,21 +59,18 @@ while True:
 
     elif opcao == 5:
         procurando = input("Digite o nome do convidado:")
+        encontrado = False
 
         for i, enu in enumerate(convidados):
             if enu == procurando:
-                print("O convidado",enu,"foi encontrado no ídice:",i)
+                encontrado = True
             else:
+                encontrado = False
+        else:
+            if encontrado == False:
                 print("Convidado não encontrado.")
-
-        add_convidado = input("Digite o nome do convidado:")
-
-        for i, enu in enumerate(convidados):
-            if enu == add_convidado:
-                print("Convidado já cadastrado.")
             else:
-                convidados.append(add_convidado)
-                print(add_convidado, "foi adicionado a lista de convidados.")
+                print("Convidado encontrado. No índice",i)
 
     elif opcao == 6:
         print("A quantidade de convidados é:", len(convidados))
