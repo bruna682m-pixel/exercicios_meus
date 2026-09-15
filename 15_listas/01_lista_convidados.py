@@ -21,14 +21,13 @@ while True:
         for i, enu in enumerate(convidados):
             if enu == add_convidado:
                 ja_encontrado = True
-            else:
-                ja_encontrado = False
+                break 
+
+        if ja_encontrado == True:
+            print("Já está na lista.")
         else:
-            if ja_encontrado == True:
-                print("Já está na lista.")
-            else:
-                convidados.append(add_convidado)
-                print(add_convidado,"está na lista.")
+            convidados.append(add_convidado)
+            print(add_convidado,"está na lista.")
 
             
     elif opcao == 2:
@@ -64,13 +63,13 @@ while True:
         for i, enu in enumerate(convidados):
             if enu == procurando:
                 encontrado = True
-            else:
-                encontrado = False
+                indice_atual = i
+                break
+        
+        if encontrado == False:
+            print("Convidado não encontrado.")
         else:
-            if encontrado == False:
-                print("Convidado não encontrado.")
-            else:
-                print("Convidado encontrado. No índice",i)
+            print("Convidado encontrado. No índice",indice_atual)
 
     elif opcao == 6:
         print("A quantidade de convidados é:", len(convidados))
