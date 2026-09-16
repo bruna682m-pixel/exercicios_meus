@@ -2,13 +2,9 @@
 
 jogadores = []
 pontuacoes = []
-numero_1 = 0
-pontuacao_1 = 0
-numero_2 = 0
-pontuacao_2 = 0
-numero_3 = 0
-pontuacao_3 = 0
-volta = 0
+
+primeiro = segundo = terceiro = quarto = float('-inf')
+nome_1 = nome_2 = nome_3 = nome_4 = "Ninguem"
 
 while True:
     jogador = input("Digite seu nome:")
@@ -22,24 +18,48 @@ while True:
         jogadores.append(jogador)
         pontuacoes.append(pontuacao)
 
-    if volta == 0:
-        numero_1 = jogador
-        pontuacao_1 = pontuacao
-        numero_2 = jogador
-        pontuacao_2 = pontuacao
-        numero_3 = jogador
-        pontuacao_3 = pontuacao
-    else:
-        if pontuacao > pontuacao_1:
-            pontuacao_1 = pontuacao
-        else:
-            if pontuacao_1 >= pontuacao:
-                pontuacao_2 = pontuacao_1
-            else:
-                pontuacao_2 <= pontuacao
-                pontuacao_3 = pontuacao_2
-        
-    volta += 1
-print(pontuacao_1)
-print(pontuacao_2)
-print(pontuacao_3)
+for i in range(len(pontuacoes)):
+    num = pontuacoes[i]
+    nome =  jogadores[i]
+    
+    if num > primeiro:
+        quarto = terceiro
+        nome_4 = nome_3
+
+        terceiro = segundo
+        nome_3 = nome_2
+
+        segundo = primeiro
+        nome_2 = nome_1
+
+        primeiro = num
+        nome_1 = jogador
+    elif num > segundo:
+        quarto = terceiro
+        nome_4 = nome_3
+
+        terceiro = segundo
+        nome_3 = nome_2
+
+        segundo = num
+        nome_2 = jogador
+    elif num > terceiro:
+        quarto = terceiro
+        nome_4 = nome_3
+
+        terceiro = num
+        nome_3 = jogador
+    elif num > quarto:
+        quarto = num
+        nome_4 = jogador
+
+     
+print(nome_1,"-",primeiro)
+print(nome_2,"-",segundo)
+print(nome_3,"-",terceiro)
+print(nome_4,"-",quarto)
+
+# %%
+
+
+

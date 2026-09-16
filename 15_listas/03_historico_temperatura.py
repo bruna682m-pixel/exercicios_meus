@@ -27,6 +27,7 @@ while True:
         menor = temperatura
     else:
         if temperatura >= maior:
+            posicao_maior = volta
             maior = temperatura
         if temperatura <= menor:
             menor = temperatura
@@ -42,9 +43,7 @@ while True:
 
     volta += 1
 
-    for i, enu in enumerate(temperaturas):
-        if enu >= enu:
-            posicao_maior = i
+    
 
 print("Posição do maior:",posicao_maior)
 print("última temperatura:", temperaturas[-1])
