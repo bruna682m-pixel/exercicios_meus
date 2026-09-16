@@ -56,12 +56,10 @@ while True:
         if filmes == []:
             print("A lista está vazia.")
         elif procurar_filme >= 0 and procurar_filme <= len(filmes) -1:
-            if procurar_filme == :
-                print("Filme",enu,"encontrado.")
-            else:
-                print("Filme não encontrado.")
+            print(filmes[procurar_filme])
+            print("Filme",procurar_filme,"encontrado.")
         else:
-            print("índice invalido.")
+            print("Filme não encontrado.")
 
     elif opcao == 6:
         primeiro_filme = filmes[0]
@@ -81,15 +79,13 @@ while True:
         if filmes == []:
             print("Lista vazia.") 
         elif marcar_assistido >= 0 and marcar_assistido <= len(filmes) -1:
-            for i, enu in enumerate(filmes):
-                if i == marcar_assistido:
-                    assistidos.append(enu)
-                    filmes.pop(i)
-                    print("Filme",enu,"marcado com assistido.")
-                else:
-                    print("Filme não encontrado.")
+            assistidos.append(marcar_assistido)
+            filmes.pop(marcar_assistido)
+            print("Filme",marcar_assistido,"marcado com assistido.")
         else:
             print("índice não encontrado.")
+
+        print(assistidos)
                 
     elif opcao == 10:
         print("Saindo...")
