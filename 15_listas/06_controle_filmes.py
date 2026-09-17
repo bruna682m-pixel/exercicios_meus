@@ -79,7 +79,7 @@ while True:
         if filmes == []:
             print("Lista vazia.") 
         elif marcar_assistido >= 0 and marcar_assistido <= len(filmes) -1:
-            assistidos.append(marcar_assistido)
+            assistidos.append(filmes[marcar_assistido])
             filmes.pop(marcar_assistido)
             print("Filme",marcar_assistido,"marcado com assistido.")
         else:

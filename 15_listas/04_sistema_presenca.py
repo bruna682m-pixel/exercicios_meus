@@ -3,7 +3,6 @@
 alunos = []
 presentes_lista = []
 ausentes_lista = []
-total = 0
 presentes = 0
 ausentes = 0
 

@@ -3,7 +3,6 @@
 temperaturas = []
 maior = 0
 menor = 0
-menor = 0
 acima_30 = 0
 abaixo_20 = 0
 soma = 0

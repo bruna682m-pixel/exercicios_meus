@@ -1,7 +1,6 @@
 # %%
 
 convidados = []
-volta = 0
 
 while True:
     opcao = int(input("""
