@@ -1,14 +1,12 @@
 # %%
 
 precos = []
-loop = 0
-total = 0
+loop = 1
 maior = 0
 menor = 0
 maior_max = 0
 menor_min = 0
 total_sum = 0
-media = 0
 media_sum = 0
 maior_10 =0 
 
@@ -19,7 +17,7 @@ while loop <= 5:
     precos.append(entrada_preco)
 
     for i in precos:
-        if loop == 0:
+        if loop == 1:
             maior = i
             menor = i
         else:
@@ -28,14 +26,13 @@ while loop <= 5:
             if i < menor:
                 menor = i
 
-    if i > 10:
-        maior_10 += 1
+if i > 10:
+    maior_10 += 1
 
 
-    total = total + i
+
     total_sum = sum(precos)
 
-    media = total / len(precos)
     media_sum =  total_sum / len(precos)
 
     maior_max = max(precos)
@@ -45,9 +42,7 @@ while loop <= 5:
     loop += 1
 
 print(f"""
-Total: {total}
 Total Sum: {total_sum}
-Média: {media}
 Média Sum: {media_sum}
 Maior preço: {maior}
 Menor preço: {menor}

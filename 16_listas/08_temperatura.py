@@ -9,11 +9,11 @@ acima_30 = 0
 abaixo_20 = 0
 soma = 0
 posicao_maior = 0
-volta = 0
+volta = 1
 dia_maior_temp = 0
 semana = 0
 
-while volta <= 6:
+while volta <= 5:
     temperatura = input("Digite as temperaturas ou enter para parar:")
 
     if temperatura == "":

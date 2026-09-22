@@ -1,7 +1,7 @@
 # %%
 
 produtos = []
-loop = 0
+loop = 1
 indice_encontrado = 0
 encontrado = False
 
