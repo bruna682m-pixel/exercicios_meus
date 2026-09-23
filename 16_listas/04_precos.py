@@ -16,6 +16,9 @@ while loop <= 5:
 
     precos.append(entrada_preco)
 
+    if i > 10:
+        maior_10 += 1
+
     for i in precos:
         if loop == 1:
             maior = i
@@ -25,11 +28,6 @@ while loop <= 5:
                 maior = i
             if i < menor:
                 menor = i
-
-if i > 10:
-    maior_10 += 1
-
-
 
     total_sum = sum(precos)
 
