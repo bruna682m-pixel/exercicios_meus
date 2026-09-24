@@ -1,10 +1,9 @@
 # %%
 
 numeros = [10, 20, 30, 40, 50]
-invertida = []
+invertida = [0] * len(numeros)
 
-for i in numeros.range(4, 0, -1):
-        invertida.append(i)
+for i, eun in enumerate(numeros):
+       invertida[len(numeros) -1 -i] = eun
 
 print(invertida)
-# está pensando em fazer igual no rangue (1, 0, -1)
