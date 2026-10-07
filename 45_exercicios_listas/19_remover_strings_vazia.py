@@ -1,14 +1,15 @@
 # %%
 
 lista = ["Mike", "", "Emma", "Kelly", "", "Brad"]
+lista_sem_espacos = []
 
 print("Lista original:",lista)
 
 for i, enu in enumerate(lista):
-    if enu == "":
-        lista.pop(i)
-
-print("Lista sem espaços vazios", lista)
+    if enu != "":
+        lista_sem_espacos.append(enu)
+        
+print("Lista sem espaços vazios", lista_sem_espacos)
 
 # %%
 lista = ["Mike", "", "Emma", "Kelly", "", "Brad"]

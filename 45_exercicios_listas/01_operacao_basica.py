@@ -1,19 +1,20 @@
 # %%
 numeros = [10, 20, 30, 40, 50]
 vazia = False
+indice = len(numeros)
 
-terceiro = numeros[2]
-
-if numeros == []:
-    vazia = True
-    vazia = "sim"
+if numeros == [] or indice < 3:
+    print("Lista vazia ou menor que 3 elementos")
 else:
-    vazia = False
-    vazia = "não"
+    terceiro = numeros[2]
+    if numeros == []:
+        vazia = True
+    else:
+        vazia = False
 
-esta_vazia = len(numeros) == 0
-print(f"a lista está vazia? {esta_vazia}")
+    esta_vazia = len(numeros) == 0
+    print(f"a lista está vazia? {esta_vazia}")
 
-print("Terceiro elemento:", terceiro)
-print("Comprimento da lista:", len(numeros))
-print("A lista está vazia?",vazia)
+    print("Terceiro elemento:", terceiro)
+    print("Comprimento da lista:", len(numeros))
+  

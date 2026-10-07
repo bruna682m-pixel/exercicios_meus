@@ -12,6 +12,7 @@ for i in lista:
             palindromo = True
         else:
             palindromo = False
+            break
 
 print(f"A lista é um palindromo: {palindromo}")
 print(lista_inversa)

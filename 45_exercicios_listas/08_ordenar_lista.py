@@ -1,12 +1,17 @@
 # %%
-
 nao_ordenada = [56, 12, 86, 3, 22]
 ordenada = []
 
-nao_ordenada.sort() 
 ordenada = sorted(nao_ordenada)
 
 print(ordenada)
+
+# %%
+
+nao_ordenada = [56, 12, 86, 3, 22]
+
+nao_ordenada.sort() 
+
 print(nao_ordenada)
 
 # %%
