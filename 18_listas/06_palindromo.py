@@ -1,15 +1,14 @@
 # %%
-
 lista = [1, 2, 3, 2, 1]
-lista_inversa = []
+lista_inversa = lista[::-1]
 palindromo = True
 
-lista_inversa = lista[::-1]
 
 for i, enu in enumerate(lista):
     if lista[i] != lista_inversa[i]:
         palindromo = False
         break
-    
-print(f"A lista é um palindromo: {palindromo}")
-print(lista_inversa)
+
+print(palindromo)
+
+

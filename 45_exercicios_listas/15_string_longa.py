@@ -10,12 +10,12 @@ for i, palavra in enumerate(palavras):
     for letra in palavra:
         contador += 1
 
-        if i == 0:
+    if i == 0:
+        maior = contador
+    else:
+        if contador > maior:
             maior = contador
-        else:
-            if contador > maior:
-                maior = contador
-                maior_palavra = palavra
+            maior_palavra = palavra
 
 print(f"A maior palavra é: {maior_palavra}")
 
