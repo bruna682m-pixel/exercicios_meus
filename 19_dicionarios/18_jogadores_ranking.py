@@ -2,7 +2,7 @@
 jogadores = {}
 maior = 0
 chave_maior = 0
-ate_100 = 0
+pelo_menos_100 = 0
 empate = 0
 
 while True:
@@ -50,23 +50,28 @@ while True:
         print("Maior pontuação:",chave_maior, maior)
 
     elif opcao == 5:
+        empate = 0
         if maior == 0:
             print("Calcule o maior primeiro")
         else:
             for c, v in jogadores.items():
                 if v == maior:
                  empate += 1
-                else:
-                    print("Sem empate.", empate)
+
+            if empate == 1:
+                print("Sem empate.")
+            else:
+                print("Existe empate.")
  
         print(empate)
 
     elif opcao == 6:
+        pelo_menos_100 = 0
         for chave_100, valor_100 in jogadores.items():
-            if valor_100 <= 100:
-                ate_100 += 1
+            if valor_100 >= 100:
+                pelo_menos_100 += 1
 
-        print("Jogadores com ate 100 pontos:", ate_100)
+        print("Jogadores com ate 100 pontos:", pelo_menos_100)
 
     elif opcao == 7:
         print("Saindo......")

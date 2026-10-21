@@ -9,8 +9,9 @@ votos = {
 invalidos = 0
 loop = 0
 maior = 0
-empate = False
+empate = 0
 chave_maior = 0
+maior_0 = 0
 
 while True:
     opcao = input("Digite um voto ou fim para encerrar:")
@@ -24,20 +25,24 @@ while True:
     else:
         votos[opcao] += 1
 
-    for chave, valor in votos.items():
-        if loop == 0:
+for chave, valor in votos.items():
+    if loop == 0:
+        maior = valor
+        chave_maior = chave
+    else:
+        if valor > maior:
             maior = valor
             chave_maior = chave
-        else:
-            if valor > maior:
-                maior = valor
-                chave_maior = chave
-        loop += 1
-        print(maior)
+    loop += 1
+    print(maior)
+
+if maior == 0:
+    maior = 0
+    empate = 0
 
 for chave_empate, valor_empate in votos.items():
-    if valor_empate == maior:
-        empate = True
+    if maior == valor_empate:
+        empate += 1
 
 
 print((f"""Votos: {votos}
