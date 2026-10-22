@@ -48,9 +48,10 @@ while True:
             loop += 1
 
         print("Maior pontuação:",chave_maior, maior)
-
-    elif opcao == 5:
+        
         empate = 0
+
+        
         if maior == 0:
             print("Calcule o maior primeiro")
         else:
@@ -58,8 +59,10 @@ while True:
                 if v == maior:
                  empate += 1
 
-            if empate == 1:
-                print("Sem empate.")
+            if empate == 0:
+                print("Nenhum jogador tem a maior pontuação.")
+            elif empate == 1:
+                print("Apenas 1 jogador tem a maior pontuação ")
             else:
                 print("Existe empate.")
  

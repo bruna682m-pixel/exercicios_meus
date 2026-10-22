@@ -34,18 +34,15 @@ for chave, valor in votos.items():
             maior = valor
             chave_maior = chave
     loop += 1
-    print(maior)
-
-if maior == 0:
-    maior = 0
-    empate = 0
 
 for chave_empate, valor_empate in votos.items():
     if maior == valor_empate:
         empate += 1
 
-
-print((f"""Votos: {votos}
+if maior == 0:
+    print("Sem votos validos.")
+else:
+    print((f"""Votos: {votos}
 Vencedor: {chave_maior} {maior}
 Empate: {empate} 
 Invalidos: {invalidos}"""   ))
