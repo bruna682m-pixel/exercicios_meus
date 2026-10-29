@@ -26,8 +26,9 @@ for chave, valor in suspeitos.items():
 
     if tipo_evidencia == valor:
         pesquisa_tipo_evidencia.append(chave)
-else:
-    print("nenhum suspeito encontrado")
+
+if pesquisa_tipo_evidencia == []:
+    print("Nenhum suspeito encontrado.")
 
 
 

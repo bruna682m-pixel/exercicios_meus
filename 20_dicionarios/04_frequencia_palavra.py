@@ -1,6 +1,6 @@
 # %%
 
-frase = "gato cachorro gato peixe cachorro gato "
+frase = "gato cachorro gato peixe cachorro gato"
 palavra_atual = ""
 frequencia = {}
 loop = 0
@@ -23,6 +23,11 @@ for i in frase:
 
         palavra_atual = ""
 
+if palavra_atual not in frequencia:
+    frequencia[palavra_atual] = 1
+else:
+    frequencia[palavra_atual] += 1
+
 for chave, valor in frequencia.items():
     if loop == 0:
         maior = valor
@@ -39,6 +44,12 @@ for chave, valor in frequencia.items():
 for chave_empate, valor_empate in frequencia.items():
     if maior == valor_empate:
         empate.append(chave_empate)
+
+if len(empate) == 1:
+    print("Não houve empate.")
+else:
+    print("Houve empate.",{empate})
+
     
 qtd_palavra = len(frequencia)
 
@@ -47,7 +58,6 @@ print(f"""
 Frequências: {frequencia}
 Maior: {chave_maior} {maior}
 Apenas 1 vez: {apenas_1_vez}
-Empate: {empate}
 Qtd de palavras: {qtd_palavra}
 """)
 

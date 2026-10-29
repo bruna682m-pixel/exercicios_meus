@@ -11,7 +11,7 @@ sem_estoque = []
 menos_5 = []
 qtd_total = 0
 qtd_produtos = 0
-pelo_menos_1 = False
+pelo_menos_1 = True
 
 for chave, valor in estoque.items():
     if valor == 0:
@@ -20,8 +20,8 @@ for chave, valor in estoque.items():
     if valor < 5:
         menos_5.append(chave)
 
-    if valor >= 1:
-        pelo_menos_1 = True
+    if valor == 0:
+        pelo_menos_1 = False
 
     qtd_total = qtd_total + valor
 qtd_produtos = len(estoque)

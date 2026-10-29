@@ -10,17 +10,19 @@ qtd_total = 0
 total_tipos = len(inventario)
 escolha = input("Escolha um item para usar:")
 
-for chave, valor in inventario.items():
-    if escolha in inventario:
-        if valor >= 1:
-            inventario[chave] -= 1
-        else:
-            print("Seus itens acabaram use outro.")
-
-    qtd_total = qtd_total + valor
+if escolha in inventario:
+    valor = inventario[escolha]
+    if valor > 0:
+        inventario[escolha] -= 1
+    else:
+        print("Seus itens acabaram use outro.")
 else:
     print("Este item não está no inventário.")
-    
+
+for valor in inventario.values():
+    qtd_total = qtd_total  + valor  
+
+
 print(f"""
 Inventário: {inventario}
 Total itens: {total_tipos}
