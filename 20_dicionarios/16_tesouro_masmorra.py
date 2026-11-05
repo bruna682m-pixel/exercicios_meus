@@ -38,14 +38,17 @@ for chave, valor in tesouros.items():
     if valor < 200:
      menor_200.append(chave)
 
-    for chave_valioso, valor_valioso in tesouros.items():
-        if valor == mais_valioso:
-            valor_igual.append(chave)
+for chave_repetido, valor_repetido in tesouros.items():
+    for repetido_chave, repetido_valor in tesouros.items():
+        if chave_repetido != repetido_chave and valor_repetido == repetido_valor:
+            if chave_repetido not in valor_igual:
+                valor_igual.append(chave_repetido)
 
-if len(valor_igual) == 1:
-    print(f"Sem valores iguais. {chave_mais_valioso} {mais_valioso}")
-else:
+if len(valor_igual) >= 2:
     print(f"Tem valores iguais. {valor_igual}")
+else:
+    print(f"Sem valores iguais. {chave_mais_valioso} {mais_valioso}")
+    
 
 print(f"""
 Tesouros: {tesouros}

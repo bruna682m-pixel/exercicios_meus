@@ -47,15 +47,15 @@ for chave, dados in equipamentos.items():
 
 
 for chave_empate, dados_empate in equipamentos.items():
-    if dados["bonus"] == maior:
-        bonus_igual.append(chave)
+    if dados_empate["bonus"] == maior:
+        bonus_igual.append(chave_empate)
 
 if nome_equipamento in equipamentos:
-        print("Atributos:", dados)
+        print("Atributos:", equipamentos[nome_equipamento])
 else:
     print("O equipamento não existe.")
 
-if len(bonus_igual) == 1:
+if len(bonus_igual) >= 2:
     print(f"Tem valores iguais. {bonus_igual}")
 else:
     print(f"Sem valores iguais. {chave_maior} {maior}")
