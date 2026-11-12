@@ -24,7 +24,10 @@ while True:
             if loja[opcao]["estoque"] >= quantidade:
                 loja[opcao]["estoque"] -= quantidade
                 valor_compra += loja[opcao]["preco"] * quantidade
-                vendas[opcao] = quantidade
+                if opcao not in vendas:
+                    vendas[opcao] = quantidade
+                else:
+                    vendas[opcao] += quantidade
             else:
                 print("Sem estoque suficiente.")
 

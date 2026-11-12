@@ -32,9 +32,13 @@ if cadastro not in guilda:
     nivel = input("Digite o nivel do novo integrante:")
     missoes_cadastro = int(input("Digite a missão do novo integrante:"))
 
-    guilda[nome["classe"]] = classe_cadastro
-    guilda[nome["nivel"]] = nivel
-    guilda[nome["missoes"]] = missoes_cadastro
+    guilda[cadastro] = {
+        "classe": classe_cadastro,
+        "nivel": int(nivel),
+        "missoes": missoes_cadastro
+    }
+else:
+    print("O integrante já está cadastrado.")
 
 for chave, valor in guilda.items():
     if valor["classe"] not in classes:
@@ -72,5 +76,6 @@ print(f"""
 Classes: {classes}
 Média: {media}
 Pelos menos 5 missões: {pelo_menos_5}
+Lista completa: {guilda}
 """)
 
