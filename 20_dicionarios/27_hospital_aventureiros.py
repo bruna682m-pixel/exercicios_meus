@@ -3,7 +3,7 @@ hospital = {
     "Arin": {"vida": 35, "ferimentos": 2, "tratamento": "pendente"},    
     "Mira": {"vida": 70, "ferimentos": 1, "tratamento": "concluido"},    
     "Toren": {"vida": 10, "ferimentos": 4, "tratamento": "pendente"},    
-    "Luna": {"vida": 90, "ferimentos": 0, "tratamento": "pendente"},    
+    "Luna": {"vida": 90, "ferimentos": 0, "tratamento": "concluido"},    
     "Kael": {"vida": 45, "ferimentos": 3, "tratamento": "pendente"}
 }
 pendente = 0
@@ -22,13 +22,13 @@ escolha_paciente = input("Digite um paciente para aumentar 20 de vida:")
 
 if escolha_paciente in hospital:
     if hospital[escolha_paciente]["tratamento"] == "pendente":
-        if hospital[escolha_paciente]["vida"] >= 90:
-            hospital[escolha_paciente]["vida"] == 100
+        if hospital[escolha_paciente]["vida"] + 20 > 100:
+            hospital[escolha_paciente]["vida"] = 100
             print(escolha_paciente,"recebeu +20 de vida")
-            if hospital[escolha_paciente]["vida"] == 100:
-                hospital[escolha_paciente]["tratamento"] = "concluido"
+            hospital[escolha_paciente]["tratamento"] = "concluido"
         else:
             hospital[escolha_paciente]["vida"] += 20
+            hospital[escolha_paciente]["tratamento"] = "concluido"
     else:
         print("O status do tratamento deve ser pendente.")
 else:
