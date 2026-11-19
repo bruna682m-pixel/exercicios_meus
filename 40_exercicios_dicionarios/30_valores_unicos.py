@@ -10,7 +10,7 @@ valores_set = set(valores)
 if len(valores_set) == len(data):
     unicos = True
 
-print("Apenas valores unicos:", False)
+print("Apenas valores unicos:", unicos)
 
 # %%
 # site

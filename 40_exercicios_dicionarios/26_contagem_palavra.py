@@ -18,12 +18,22 @@ palavra_atual = ""
 text = "the cat sat on the mat the cat"
 
 for i in text:
-    if i != "":
-        palavra_atual += i
+    if i != " ":
+       palavra_atual += i
 
-    if i == "":
-        palavras_dict[palavra_atual]
+    if i == " ":
+        if palavra_atual not in palavras_dict:
+            palavras_dict[palavra_atual] = 1
+        else:
+            palavras_dict[palavra_atual] += 1
+        
+        palavra_atual = ""
 
-palavras_dict[palavra_atual]
+if palavra_atual != "":
+    if palavra_atual not in palavras_dict:
+            palavras_dict[palavra_atual] = 1
+    else:
+        palavras_dict[palavra_atual] += 1
+
 
 print(palavras_dict)
