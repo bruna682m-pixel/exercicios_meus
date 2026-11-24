@@ -8,4 +8,4 @@ json_dicionario = json.loads(dados_json)
 
 print(dados_json)
 print(json_dicionario)
-print(livros["102"])
+print("Titulo do segundo livro:", json_dicionario["102"]["titulo"])
